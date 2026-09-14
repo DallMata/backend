@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1944b9bb-0a16-4d41-95c8-a1b5edddfdc1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/railway.tom" beforeDir="false" afterPath="$PROJECT_DIR$/railway.tom1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

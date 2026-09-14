@@ -8,12 +8,12 @@ class Settings(BaseSettings):
     db_port: int
     db_name: str
 
+    frontend_url: str = "http://localhost:5173"
+
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",
     )
 
-
-frontend_url: str = "http://localhost:5173"
 
 settings = Settings()
