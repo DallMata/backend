@@ -9,6 +9,7 @@ from app.schemas.operation import BuyOperationCreate, OperationResponse
 from sqlalchemy import select
 from decimal import Decimal
 from app.schemas.operation import HoldingResponse
+from app.dependencies import get_current_user
 
 from app.schemas.operation import SaleResultResponse
 
@@ -23,7 +24,8 @@ from app.schemas.operation import (
 
 router = APIRouter(
     prefix="/operations",
-    tags=["Operations"],
+    tags=["operations"],
+    dependencies=[Depends(get_current_user)],
 )
 
 

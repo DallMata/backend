@@ -5,11 +5,13 @@ from sqlalchemy.orm import Session
 from app.database import get_db
 from app.models.client import Client
 from app.schemas.client import ClientCreate, ClientResponse
+from app.dependencies import get_current_user
 
 
 router = APIRouter(
     prefix="/clients",
-    tags=["Clients"],
+    tags=["clients"],
+    dependencies=[Depends(get_current_user)],
 )
 
 

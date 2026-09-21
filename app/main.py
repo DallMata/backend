@@ -7,6 +7,7 @@ from app.database import engine
 from app.routers.clients import router as clients_router
 from app.routers.instrument import router as instruments_router
 from app.routers.operation import router as operations_router
+from app.routers import auth
 
 
 app = FastAPI(
@@ -39,6 +40,7 @@ app.add_middleware(
 app.include_router(clients_router)
 app.include_router(instruments_router)
 app.include_router(operations_router)
+app.include_router(auth.router)
 
 
 # =====================================================

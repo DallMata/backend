@@ -5,11 +5,13 @@ from sqlalchemy.orm import Session
 from app.database import get_db
 from app.models.instrument import Instrument
 from app.schemas.instrument import InstrumentCreate, InstrumentResponse
+from app.dependencies import get_current_user
 
 
 router = APIRouter(
     prefix="/instruments",
-    tags=["Instruments"],
+    tags=["instruments"],
+    dependencies=[Depends(get_current_user)],
 )
 
 
